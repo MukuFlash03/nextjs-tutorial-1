@@ -8,6 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 5550
+# Placeholder for backend server port; actual port is set and overridden by .env file.
+EXPOSE 5000
 
 CMD ["npm", "run", "dev"]
