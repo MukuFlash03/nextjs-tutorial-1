@@ -10,6 +10,10 @@ div_app.appendChild(header);
 
 // With React
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Button from './click-button';
+
 function createTitle(title) {
     return title ? title : "Default Title";
 }
@@ -36,27 +40,7 @@ function ItemList({ items }) {
     )
 }
 
-function Button({ label }) {
-    const [clicks, setClicks] = React.useState(0);
-
-    function handleClick(label) {
-        setClicks(prevClicks => prevClicks + 1);
-    }
-
-    React.useEffect(() => {
-        console.log(`Click count for ${label} is now ${clicks}`);
-    }, [clicks]); // This effect runs only when `clicks` changes.
-
-    return (
-        <button onClick={handleClick}>
-            {label}
-        </button>
-    );
-}
-
-
-
-function HomePage() {
+export default function HomePage() {
     const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
     const buttons = [
@@ -76,7 +60,3 @@ function HomePage() {
         </div>
     )
 }
-
-const div_app = document.getElementById('app-root');
-const root = ReactDOM.createRoot(div_app);
-root.render(<HomePage />);
