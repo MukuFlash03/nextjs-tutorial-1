@@ -35,6 +35,9 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+# production
+/build
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
@@ -47,6 +50,9 @@ web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
+
+# typescript
+next-env.d.ts
 
 # Optional npm cache directory
 .npm
@@ -128,3 +134,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# misc
+.DS_Store
+*.pem
+
+# vercel
+.vercel
